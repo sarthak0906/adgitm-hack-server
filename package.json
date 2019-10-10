@@ -1,6 +1,9 @@
 {
   "name": "web-scraping-1st",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node hack.js",
+  },
   "description": "1st attemplt at web scraping using puppeteer js",
   "main": "server.js",
   "author": "sarthak khandelwal",
