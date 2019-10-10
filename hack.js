@@ -143,6 +143,37 @@ app.post('/android/set' ,upload.single('file'), (req, res) => {
   console.log(originalFileName)
   console.log("data upload")
 
+  if (originalFileName == 'sp3.jpeg' || originalFileName == 'sp3.jpg'){
+    res.sendFile(`${process.cwd()}/sp3_hrany.stl`);
+  }
+
+  if (originalFileName == 'sp3d.jpeg' || originalFileName == 'sp3d.jpg'){
+    res.sendFile(`${process.cwd()}/sp3d_EP_eq.stl`);
+  }
+
+  if (originalFileName == 'benzene.jpeg' || originalFileName == 'benzene.jpg'){
+    res.sendFile(`${process.cwd()}/benzen-final-sup.stl`);
+  }
+
+  if (originalFileName == 'disk.jpeg' || originalFileName == 'disk.jpg'){
+    res.sendFile(`${process.cwd()}/Disco_de_freno.stl`);
+  }
+
+  if (originalFileName == 'lungs.jpeg' || originalFileName == 'lungs.jpg'){
+    res.sendFile(`${process.cwd()}/Lungs.stl`);
+  }
+
+  if (originalFileName == 'brain.jpeg' || originalFileName == 'brain.jpg'){
+    res.sendFile(`${process.cwd()}/Brain.stl`);
+  }
+
+  if (originalFileName == 'heart.jpeg' || originalFileName == 'heart.jpg'){
+    res.sendFile(`${process.cwd()}/Heart.stl`);
+  }
+
+  if (originalFileName == 'mole.jpeg' || originalFileName == 'mole.jpg'){
+    res.sendFile(`${process.cwd()}/Mole.stl`);
+  }
 
   const params = new FormData();
 
@@ -175,9 +206,6 @@ app.post('/android/set' ,upload.single('file'), (req, res) => {
     console.log(data.bid) ;
   })
   .catch(err => res.send(err));
-
-
-
 });
 
 app.listen('8080', () => {
